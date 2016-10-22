@@ -10,8 +10,7 @@ class TestApp(QtGui.QWidget):
         self.plotui = pg.PlotWidget()
 
         item = pgutils.LineSegmentItem([10,20], [40,40])
-        plt = pg.plot()
-        plt.addItem(item)
+        self.plotui.addItem(item)
 
         self.mainLayout.addWidget(self.plotui)
         self.setLayout(self.mainLayout)
