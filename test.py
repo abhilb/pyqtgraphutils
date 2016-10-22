@@ -12,6 +12,9 @@ class TestApp(QtGui.QWidget):
         item = pgutils.LineSegmentItem([10,20], [40,40])
         self.plotui.addItem(item)
 
+        item1 = pgutils.CircleItem([10, 20], 50)
+        self.plotui.addItem(item1)
+
         self.mainLayout.addWidget(self.plotui)
         self.setLayout(self.mainLayout)
 
@@ -23,7 +26,7 @@ class TestApp(QtGui.QWidget):
 def main():
     app = QtGui.QApplication(sys.argv)
     w = TestApp()
-    w.resize(600, 450)
+    w.resize(600, 600)
     w.move(300, 300)
     w.setWindowTitle('Test pyqtgraph')
     w.show()
