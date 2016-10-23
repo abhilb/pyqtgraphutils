@@ -15,6 +15,9 @@ class TestApp(QtGui.QWidget):
         item1 = pgutils.CircleItem([10, 20], 50)
         self.plotui.addItem(item1)
 
+        item2 = pgutils.RectangleItem([80, 80], [200, 100])
+        self.plotui.addItem(item2)
+
         self.mainLayout.addWidget(self.plotui)
         self.setLayout(self.mainLayout)
 
